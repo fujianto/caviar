@@ -29,11 +29,10 @@ if( ! class_exists('Field_Controls')) {
 			wp_register_script( 'radiotabs-admin-js' , CAVIAR_DIR_URI. '/js/caviar-radio-tabs.js', array('jquery'), null, true);
 			wp_register_script( 'chosen'             , CAVIAR_BOWER . '/chosen/chosen.jquery.min.js', array('jquery'), null, true );
 			wp_register_script( 'caviar-admin-js'    , CAVIAR_DIR_URI. '/js/caviar-admin-scripts.js', array('jquery', 'radiotabs-admin-js', 'wp-color-picker', 'chosen'), null, true);
-		
+			
 			wp_enqueue_script('jquery-ui-accordion');
 			wp_enqueue_script('jquery-ui-sortable');
 			wp_enqueue_script('jquery-ui-tabs');
-
 			wp_enqueue_script('caviar-admin-js');
 		}
 
