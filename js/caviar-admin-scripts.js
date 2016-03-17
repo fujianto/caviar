@@ -167,6 +167,8 @@ jQuery(document).ready(function ($) {
             // console.log(jQuery(elId).data('id'));
             // console.log(parseInt(jQuery(elId).find('.repeatingSection').length));
 
+            callAccordion();
+            
             $.each(objFields, function(index, key){
                 switch (key.type){
                     case 'text':

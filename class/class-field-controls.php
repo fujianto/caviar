@@ -22,7 +22,7 @@ if( ! class_exists('Field_Controls')) {
 			wp_enqueue_style( 'caviar-fontawesome' , 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css');
 			wp_enqueue_style( 'chosen'             , CAVIAR_BOWER . '/chosen/chosen.min.css');
 
-			wp_enqueue_style('jquery-ui', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css');
+			wp_enqueue_style('jquery-ui', CAVIAR_DIR_URI.'css/jekui.css');
 		}
 
 		public function caviar_enqueue_admin_scripts(){
@@ -497,6 +497,8 @@ if( ! class_exists('Field_Controls')) {
 			/* Print label before control */
 			echo $control_label;
 
+			wp_enqueue_style('jquery-ui', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css');
+			
 			echo "<div id='caviar-".$id."' class='repeater-field dynamicAccordion-".$id."' data-id='".$id."' data-name='".$name."' data-fields='".json_encode($fields)."' data-fields-count='".count($value)."'>";
 	 		echo self::each_repeater($title, $id, $name, $value, $fields).
 	 		 	'<div class="widget-separator"> <span id="'.$id.'-clone"></span> </div>';
